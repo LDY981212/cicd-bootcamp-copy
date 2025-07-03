@@ -19,3 +19,21 @@ jobs:
 
       - name: build step
         run: npm run build
+
+  # npm run lint
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout code
+        uses: actions/checkout@v4
+
+      - name: install nodejs
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: install dependencies
+        run: npm ci
+
+      - name: run lint
+        run: npm run lint

@@ -1,0 +1,16 @@
+name: context test
+
+on: push
+
+jobs:
+  github:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 저장소 정보 출력
+        run: echo ${{github.repository}}
+
+      - name: 브랜치 정보 출력
+        run: echo ${{github.ref}}
+
+      - name: 커밋 정보 출력
+        run: echo ${{github.sha}}

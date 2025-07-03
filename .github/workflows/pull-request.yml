@@ -1,0 +1,19 @@
+name: pull-request test
+
+on:
+  - pull_request
+  - push
+
+jobs:
+  info:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Hello world
+        run: echo "Hello world"
+
+      - name: pull request일 때 출력
+        if: github.event_name == 'pull_request'
+        run: |
+          echo "PR 제목: ${{github.event.pull_request.title}}"
+          echo "PR 번호: ${{github.event.pull_request.number}}"
+          echo "PR 작성자: ${{github.event.pull_request.user.login}}"

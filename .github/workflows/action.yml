@@ -1,8 +1,8 @@
 name: first workflow
-on: [push, workflow_dispatch]
-jobs:
-  hello_world:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Hello World
-        run: echo "Hello, World!"
+on: [push, workflow_dispatch] # 이벤트 트리거
+jobs: # jobs -> job들을 작성
+  hello_world: # job의 이름
+    runs-on: ubuntu-latest # workflow가 실행되는 가상 환경
+    steps: # step 정의
+      - name: Hello World # stemp의 이름
+        run: echo "Hello, World!" # run : <cli 명렁어>

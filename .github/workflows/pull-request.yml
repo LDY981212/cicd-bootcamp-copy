@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Hello world
-        run: echo "Hello world"
+        run: echo "Hello world !!!"
 
       - name: pull request일 때 출력
         if: github.event_name == 'pull_request'

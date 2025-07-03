@@ -1,0 +1,16 @@
+name: Event Filters
+
+on:
+  push:
+    paths:
+      - "src/**"
+    branches:
+      - main
+      - develop
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Hello world
+        run: echo "Hello world"

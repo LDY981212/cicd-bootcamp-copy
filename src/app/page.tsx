@@ -7,6 +7,7 @@ export default function Home() {
         <h1 className="text-4xl font-bold text-center mb-8">CI/CD Test App</h1>
         <div className="max-w-md mx-auto">
           <Counter />
+          <div>test</div>
         </div>
       </main>
     </div>
